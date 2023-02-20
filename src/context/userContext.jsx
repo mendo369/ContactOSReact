@@ -11,7 +11,7 @@ export function UserContextProvider({ children }) {
 
     return (
         <Context.Provider value={{
-            user, setContacts, contacts, setContacts
+            user, setUser, contacts, setContacts
         }}>
             {children}
         </Context.Provider>

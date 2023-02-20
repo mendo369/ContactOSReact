@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { UserContextProvider } from "./context/userContext";
+
 import IndexAuth from "./Pages/Auth/Index/Index";
 import Login from "./Pages/Auth/Login/Login";
 import Register from "./Pages/Auth/Register/Register";
@@ -48,7 +50,9 @@ const routes = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={routes} />
-  </React.StrictMode>
+  <UserContextProvider>
+    <React.StrictMode>
+      <RouterProvider router={routes} />
+    </React.StrictMode>
+  </UserContextProvider>
 );

@@ -1,14 +1,23 @@
 const user = {
     email: "user@mail.com",
     phone: "3000000000",
-    password: "contraseña"
+    password: "contraseña",
+    token: "34p"
 }
 
 export default function login({ user: userprop, password }) {
-    if ((userprop == user.email || userprop == user.phone) && password == user.password) {
-        return user
-    }
-    else {
-        return new Error('user or password invalid')
-    }
+    return new Promise((res, rej) => {
+
+        if ((userprop == user.email || userprop == user.phone) && password == user.password) {
+            res(
+                user
+                // console.log("login succesfull")
+            )
+        }
+        else {
+            rej(
+                console.log("Erro login")
+            )
+        }
+    })
 }
