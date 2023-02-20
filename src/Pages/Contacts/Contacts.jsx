@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Contacts() {
   return (
     <>
-      <div>Home</div>;
+      <div>Contacts</div>;
       <button>
-        <Link to={"/contacts"}>contacts</Link>
+        <Link to={"/"}>Home</Link>
       </button>
     </>
   );
 }
 
-export default Home;
+export default Contacts;
