@@ -1,12 +1,14 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
-import Home from "../Home/Home";
 
 function Index() {
-  return (
+  return (<>
     <Nav />
-    // <Outlet />
+    <Outlet />
+    <Link to={'contacts'}>contacts</Link>
+    <Link to={'home'}>home</Link>
+  </>
   );
 }
 

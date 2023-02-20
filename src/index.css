@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.active-route {
+  font-weight: bold;
+  pointer-events: none;
+  font-size: larger;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
