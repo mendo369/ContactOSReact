@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 const Context = React.createContext();
 
 export function UserContextProvider({ children }) {
@@ -17,3 +16,5 @@ export function UserContextProvider({ children }) {
         </Context.Provider>
     )
 }
+
+export default Context
