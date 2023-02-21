@@ -10,18 +10,30 @@ function useUser() {
     const Login = useCallback(
         ({ user, password }) => {
             loginService({ user, password }).then(res => {
-                const { email, phone, password, token } = res
+                const { email, phone, password, token, contacts } = res
                 console.log(res)
-                const userRes = { email, password, phone, token }
+                const userRes = { email, password, phone, token, contacts }
                 setUser(userRes)
                 localStorage.setItem("user", JSON.stringify(userRes));
                 navigate('/')
             })
                 .catch(err => alert(err))
-        }, []
+        }, [setUser]
     );
 
-    return { Login, isLogged: Boolean(user), user }
+    const LogOut = () => {
+        setUser(null)
+        localStorage.removeItem("user")
+        console.log("usurio cerró sesion")
+        navigate('/')
+    }
+
+    return {
+        Login,
+        LogOut,
+        isLogged: Boolean(user),
+        user
+    }
 }
 
 export default useUser;

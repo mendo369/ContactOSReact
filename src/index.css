@@ -20,6 +20,21 @@ a {
   font-size: larger;
 }
 
+.views {
+  background-color: red;
+  text-align: center;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.views a {
+  color: white;
+
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
