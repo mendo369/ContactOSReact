@@ -7,12 +7,18 @@ function Index() {
     <Nav />
     <div className="views">
 
-      <NavLink to={'contacts'} className={({ isActive }) =>
+      <NavLink to={'notes'} className={({ isActive }) =>
+        isActive ? 'active-route' : undefined
+      }>Notes</NavLink>
+      <NavLink to={''} className={({ isActive }) =>
         isActive ? 'active-route' : undefined
       }>contacts</NavLink>
-      <NavLink to={'home'} className={({ isActive }) =>
+      <NavLink to={'dates'} className={({ isActive }) =>
         isActive ? 'active-route' : undefined
-      }>home</NavLink>
+      }>Dates</NavLink>
+      {/* <NavLink to={'home'} className={({ isActive }) =>
+        isActive ? 'active-route' : undefined
+      }>home</NavLink> */}
     </div>
     <Outlet />
   </>

@@ -10,6 +10,8 @@ import Register from "./Pages/Auth/Register/Register";
 import Index from "./Pages/Index/Index";
 import Home from "./Pages/Home/Home";
 import Contacts from "./Pages/Contacts/Contacts";
+import Notes from "./Pages/Notes/Notes";
+import Dates from "./Pages/Dates/Dates";
 import NotFound from "./Pages/Not Found/NotFound";
 
 import "./index.css";
@@ -24,8 +26,16 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/contacts",
+        path: "/",
         element: <Contacts />,
+      },
+      {
+        path: "/dates",
+        element: <Dates />,
+      },
+      {
+        path: "/notes",
+        element: <Notes />,
       },
     ]
   },

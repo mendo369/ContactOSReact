@@ -29,3 +29,10 @@ nav {
   padding: 3px;
   border-radius: 3px;
 }
+
+button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}

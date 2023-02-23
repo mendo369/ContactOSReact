@@ -3,24 +3,23 @@ import { Link } from 'react-router-dom'
 import useUser from '../../../Hooks/useUser';
 
 function Login() {
-    const [user, setUser] = useState('')
+    const [phone, setPhone] = useState('')
     const [password, setPassword] = useState('')
     const { Login } = useUser()
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({ user, password })
-        Login({ user, password });
-        // navigate("/");
+        const user = { phone, password }
+        Login({ user });
     };
     return (
         <>
             <section className="login">
                 <form className='form-auth' onSubmit={handleSubmit}>
                     <div className="input-group">
-                        <label htmlFor="user">Phone/Email</label>
-                        <input type="text" name='phone' placeholder='e.x. 300000000' value={user}
-                            onChange={(e) => setUser(e.target.value)}
+                        <label htmlFor="phone">Phone</label>
+                        <input type="text" name='phone' placeholder='e.x. 300000000' value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
                         />
                     </div>
                     <div className="input-group">

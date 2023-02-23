@@ -1,18 +1,19 @@
 import { useContext, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Context from "../context/userContext";
-import loginService from "../services/login";
+import loginService from "../services/loginProd";
 
 function useUser() {
     let navigate = useNavigate()
     const { user, setUser, contacts, setContacts } = useContext(Context)
 
     const Login = useCallback(
-        ({ user, password }) => {
-            loginService({ user, password }).then(res => {
-                const { email, phone, password, token, contacts } = res
+        ({ user }) => {
+            console.log("Este es el usuario que pasamos", user)
+            loginService({ user }).then(res => {
+                const { email, phone, password, token, contacts, notes, dates } = res
                 console.log(res)
-                const userRes = { email, password, phone, token, contacts }
+                const userRes = { email, password, phone, token, contacts, notes, dates }
                 setUser(userRes)
                 localStorage.setItem("user", JSON.stringify(userRes));
                 navigate('/')

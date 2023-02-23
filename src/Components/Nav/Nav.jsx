@@ -15,7 +15,7 @@ function Nav() {
           <div className="menu">
             {
               isLogged ?
-                <button onClick={LogOut}>Salir</button>
+                <button onClick={LogOut}>Salir 🚪</button>
                 :
                 <Link to={'/auth/register'}>Login 🌎</Link>
             }

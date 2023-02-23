@@ -19,6 +19,32 @@ const user = {
             name: "Darien",
             phone: "3001112244"
         },
+    ],
+    notes: [
+        {
+            id: 1,
+            content: "esta es una nota creada para pruebas"
+        },
+        {
+            id: 2,
+            content: "esta es una nota creada para pruebas sfsasg ssga gsf fg r rgrg"
+        },
+        {
+            id: 3,
+            content: "esta es una nota creada para pruebas sfgrr rere gr greg regg"
+        }
+    ],
+    dates: [
+        {
+            id: 1,
+            date: "10/02/2023",
+            info: "Fecha importante de prueba"
+        },
+        {
+            id: 2,
+            date: "10/02/2023",
+            info: "Fecha importante de prueba #2"
+        },
     ]
 }
 

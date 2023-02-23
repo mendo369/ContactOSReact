@@ -7,10 +7,19 @@ export function UserContextProvider({ children }) {
     )
 
     const [contacts, setContacts] = useState([])
+    const [notes, setNotes] = useState([])
+    const [dates, setDates] = useState([])
 
     return (
         <Context.Provider value={{
-            user, setUser, contacts, setContacts
+            user,
+            setUser,
+            contacts,
+            setContacts,
+            notes,
+            setNotes,
+            dates,
+            setDates
         }}>
             {children}
         </Context.Provider>
