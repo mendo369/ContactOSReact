@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ContactsC from "../../Components/Contacts/Contacts";
 import useUser from "../../Hooks/useUser";
 
@@ -11,7 +10,10 @@ function Contacts() {
     <>
       {
         isLogged ?
-          <ContactsC contacts={user.contacts} />
+          user.contacts ?
+            <ContactsC contacts={user.contacts} />
+            :
+            <p>Vaya! aún no has guardado ningún contacto</p>
           :
           <p>Logeate y comienza a guardar tus contactos</p>
       }
