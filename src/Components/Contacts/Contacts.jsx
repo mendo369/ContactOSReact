@@ -4,7 +4,6 @@ function Contacts({ contacts }) {
     console.log(contacts)
     return (
         <div className='contacts'>
-            <h2>lista de contactos</h2>
             <ul>
                 {
                     contacts.map(contact => {

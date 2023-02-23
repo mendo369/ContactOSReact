@@ -1,3 +1,22 @@
+.header-page {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
+
+.header-page button {
+    position: absolute;
+    right: 20%;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px gray;
+}
+
 h2 {
     text-align: center;
 }
