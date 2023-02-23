@@ -4,7 +4,6 @@ function ListDates({ dates }) {
     console.log("Dates: ", dates)
     return (
         <div className='dates'>
-            <h2>lista de fechas</h2>
             <ul>
                 {
                     dates.map(date => {

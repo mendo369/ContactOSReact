@@ -3,7 +3,6 @@ import React from 'react'
 function ListNotes({ notes }) {
     return (
         <div className="notes-list">
-            <h2>Notes</h2>
             <ul>
                 {
                     notes.map(note => {

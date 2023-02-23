@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ContactsC from "../../Components/Contacts/Contacts";
 import useUser from "../../Hooks/useUser";
 import Modal from "../../Components/modal/modal";
+import AddContact from "../../Components/Contacts/AddContact";
 
 import './style.css'
 
@@ -15,7 +16,7 @@ function Contacts() {
         <button onClick={() => setOpenModal(true)}>🖊️</button>
       </div>
       <Modal open={openModal} onClose={() => setOpenModal(false)} >
-        hola
+        <AddContact onClose={() => setOpenModal(false)} />
       </Modal>
       {
         isLogged ?
